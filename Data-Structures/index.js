@@ -111,23 +111,3 @@ const sports = ["football", "baseball", "soccer", "hockey"]
 for (let index = 0; index < sports.length; index++) {
     console.log( sports[index] )
 }
-
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
-// RETURN AT 2:05pm
