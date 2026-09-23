@@ -3,8 +3,9 @@
 // The function should return the names combined into one string.
 // Example: fullName("Chett", "Tiller") >>> "Chett Tiller"
 
-function fullName() {
-
+function fullName(firstName, lastName) {
+    // return `${firstName} ${lastName}`;
+    return firstName + " " + lastName;
 }
 
 
@@ -17,11 +18,15 @@ function fullName() {
 // Example: validId(2023) >>> false
 // BONUS: Instead of hardcoding 2026, use Date to get the current year.
 
-function validId() {
-
+function validId(year) {
+    const d = new Date(); 
+    const currentYear = d.getFullYear();
+    if ( year >= currentYear ) {
+        return true;
+    } else {
+        return false
+    }
 }
-
-
 
 // 3 //////////////////////////////////////////////////////////////////////////////////
 // Create a function `calculate()` which accepts `num1`, `num2`, and `operation`.
@@ -35,6 +40,33 @@ function validId() {
 // Example: calculate(2,4,"+") >>> 6
 // Example: calculate(8,2,"/") >>> 4
 
-function calculate() {
+function calculate(num1, num2, operation) {
+    if (operation === "+") {
+        return num1 + num2
+    } else if (operation === "-") {
+        return num1 - num2
+    } else if (operation === "x") {
+        return num1 * num2
+    } else if (operation === "*") {
+        return num1 * num2
+    } else if (operation === "/") {
+        return num1 / num2
+    }
+}
 
+function calculateSwitch(num1, num2, operation) {
+    switch (operation) {
+        case "+":
+            return num1 + num2;
+        case "-":
+            return num1 - num2;
+        case "*":
+            return num1 * num2;
+        case "x":
+            return num1 * num2;
+        case "/":
+            return num1 / num2;
+        default:
+            return
+    }
 }
