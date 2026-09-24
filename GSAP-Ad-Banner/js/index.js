@@ -5,6 +5,7 @@ const timeline = gsap.timeline({
 
 timeline
 // MAKE ANIMATION VISIBLE
+// was hidden to avoid flash of unstyled content
 .set('#banner', {
     display: 'block'
 })

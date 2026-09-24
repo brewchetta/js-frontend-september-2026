@@ -1,6 +1,6 @@
 const tl = gsap.timeline({
 	scrollTrigger: {
-		trigger: ".header",
+		trigger: "#hero",
 		start: "top top",
 		end: "bottom top",
 		scrub: true,
@@ -8,13 +8,21 @@ const tl = gsap.timeline({
 	}
 });
 
-gsap.utils.toArray(".header__background-layer").forEach(layer => {
+const paraElements = document.querySelectorAll("#hero > *")
+
+for (let index = 0; index < paraElements.length; index++) {
+	// layer is each layer one at a time [background/middleground/foreground/h1]
+	const layer = paraElements[index]
+	// grab the dataset info
 	const depth = layer.dataset.depth;
+	// add the tween to the timeline
 	tl.to(layer, { 
-		y: () => -(layer.offsetHeight * depth), 
+		y: function() { 
+			return -(layer.offsetHeight * depth);
+		}, 
 		ease: "none" 
 	}, 0);
-});
+}
 
 /*
 This code was posted to the GSAP Forums by Jack Doyle, the creator of GSAP (it's in the embedded CodePen's "Babel" tab)
